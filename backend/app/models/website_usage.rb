@@ -1,0 +1,2 @@
+class WebsiteUsage < ApplicationRecord
+end

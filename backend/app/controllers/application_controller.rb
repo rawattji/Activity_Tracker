@@ -1,2 +1,6 @@
 class ApplicationController < ActionController::API
-end
+    def test
+      render json: { test: "success" }
+    end
+  end
+  
