@@ -1,2 +1,5 @@
 class WebsiteUsage < ApplicationRecord
-end
+    validates :url, presence: true
+    validates :time_spent, presence: true
+  end
+  
