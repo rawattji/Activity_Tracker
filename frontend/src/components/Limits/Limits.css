@@ -1,0 +1,74 @@
+/* limits.css - Specific to the Limits component */
+.limits-container {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.left-column {
+  width: 50%; /* 2/4 of the width */
+  padding-right: 12.5%; /* 1/4 of the width as space */
+}
+
+.right-column {
+  width: 25%; /* 1/4 of the width */
+}
+
+.limits-container h2 {
+  color: #333;
+}
+
+.limits-container > div {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 100%;
+  margin: 30px auto;
+}
+
+.limits-container label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.limits-container input[type="text"],
+.limits-container input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.limits-container button {
+  background-color: #5cb85c;
+  justify-content: space-between;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+
+}
+.button-set-limit {
+  margin-right: 10px; /* Adjust the space as needed */
+}
+
+.limits-container button:hover {
+  background-color: #449d44;
+}
+
+.limits-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.limits-container p {
+  color: #d9534f;
+  margin-top: 15px;
+}

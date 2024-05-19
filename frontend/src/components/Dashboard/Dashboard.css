@@ -1,0 +1,79 @@
+/* Dashboard.css */
+.dashboard-container {
+  max-width: 800px; /* Adjust the max-width according to your preference */
+  margin: 0 auto; /* Center the content */
+  padding: 20px; /* Padding around the content */
+}
+
+/* Styling for the dashboard summary */
+.dashboard-summary {
+  text-align: center; /* Center align the summary */
+  margin-bottom: 20px; /* Add margin bottom for separation */
+}
+
+/* Styling for the chart container */
+.chart-container {
+  max-width: 400px; /* Adjust the max-width according to your preference */
+  margin: 0 auto; /* Center the container */
+  margin-bottom: 20px; /* Add some bottom margin for separation */
+  position: relative; /* Make it a positioned element */
+  text-align: center; /* Center align the chart */
+}
+
+/* Adjust the legend to align to the right */
+.chart-container .chartjs-legend {
+  position: absolute;
+  top: 50%;
+  right: -150px; /* Adjusted right to move it outside of chart container */
+  transform: translateY(-50%); /* Center the legend vertically */
+}
+
+/* Change the style of the pie chart entities to circles */
+.chart-container .chartjs-legend ul {
+  list-style-type: none; /* Remove default list style */
+  padding-left: 0; /* Remove default padding */
+  color: #333; /* Dark grey color for the bullet points */
+}
+
+.chart-container .chartjs-legend ul li {
+  display: flex; /* Flex display for alignment */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 5px; /* Space between items */
+}
+
+.chart-container .chartjs-legend ul li::before {
+  content: '';
+  display: inline-block;
+  height: 12px; /* Adjust size as needed */
+  width: 12px; /* Adjust size as needed */
+  border-radius: 50%; /* Make it a circle */
+  background-color: currentColor; /* Use current text color */
+  margin-right: 8px; /* Space between circle and text */
+}
+
+/* Styling for the website details table */
+.website-details {
+  text-align: center; /* Center align the table */
+}
+
+.website-details table {
+  width: 100%; /* Ensure the table takes full width */
+  border-collapse: collapse; /* Collapse table borders */
+}
+
+.website-details th, .website-details td {
+  border: 1px solid #ddd; /* Add border for cells */
+  padding: 8px; /* Add padding for cells */
+}
+
+.website-details th {
+  background-color: #f2f2f2; /* Light grey background for table headers */
+}
+
+.website-details tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light grey background for even rows */
+}
+
+.website-details tbody tr:hover {
+  background-color: #f1f1f1; /* Slightly darker grey on hover */
+}

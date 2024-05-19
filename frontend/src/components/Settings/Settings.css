@@ -1,0 +1,44 @@
+/* Settings.css */
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This will make the container take up the full height of the viewport */
+    padding: 20px;
+  }
+  
+  .settings-container .settings-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .settings-container input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .settings-container label {
+    margin-right: 10px;
+  }
+  
+  .settings-container input[type="date"] {
+    margin-right: 10px;
+  }
+  
+  .settings-container button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .settings-container button:hover {
+    background-color: #45a049;
+  }
+  

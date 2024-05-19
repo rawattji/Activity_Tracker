@@ -1,0 +1,63 @@
+/* Navbar.css */
+.logo-container {
+  display: flex;
+  align-items: center; /* This will vertically align the logo and the text */
+}
+
+.brand-name {
+  display: inline-block;
+  vertical-align: middle; /* This will vertically align the text with the logo */
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar-left,
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar a:hover {
+    color: #04AA6D;
+  }
+  
+  .logo {
+    
+    height:40px; /* Adjust size as needed */
+    margin-right: 10px;
+  }
+  
+  .icon {
+    height: 20px; /* Adjust size as needed */
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-center,
+    .navbar-right {
+      justify-content: space-around;
+    }
+  
+    .navbar a {
+      margin: 0 5px;
+    }
+  }
+  

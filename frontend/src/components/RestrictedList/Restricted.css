@@ -1,0 +1,35 @@
+.restricted-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8d7da;
+  color: #721c24;
+  font-family: Arial, sans-serif;
+}
+
+.restricted-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.restricted-text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.restricted-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.restricted-button:hover {
+  background-color: #0056b3;
+}

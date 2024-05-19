@@ -1,0 +1,43 @@
+/* Login.css and SignUp.css */
+
+.login-container,
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This will make the container take up the full height of the viewport */
+  padding: 20px;
+}
+
+.login-container input,
+.signup-container input {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* This will make the input fields take up the full width of the container */
+}
+
+.login-container button,
+.signup-container button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.login-container button:hover,
+.signup-container button:hover {
+  background-color: #45a049;
+}
+
+.login-container .error,
+.signup-container .error {
+  color: red;
+}

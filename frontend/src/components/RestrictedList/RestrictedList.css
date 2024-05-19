@@ -1,0 +1,102 @@
+/* RestrictedList.css */
+.restrictedList-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .restrictedList-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .restrictedList-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .restrictedList-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .restrictedList-item:last-child {
+    border-bottom: none;
+  }
+  
+  .restrictedList-item button {
+    padding: 5px 10px;
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .restrictedList-item button:hover {
+    background-color: #ff7875;
+  }
+  
+  .restrictedList-input {
+    width: calc(100% - 80px);
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+  }
+  
+  .restrictedList-add-btn {
+    padding: 10px 20px;
+    background-color: #1890ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .restrictedList-add-btn:hover {
+    background-color: #40a9ff;
+  }
+  
+  /* Add styles for error messages */
+.restrictedList-error {
+    color: #ff4d4f;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the input container for better alignment */
+  .restrictedList-input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .restrictedList-input {
+    flex-grow: 1;
+    margin-right: 10px;
+    /* Other styles remain the same */
+  }
+  
+  .restrictedList-delete-btn {
+    padding: 5px 15px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .restrictedList-delete-btn:hover {
+    background-color: #c0392b;
+  }
+  

@@ -1,24 +1,55 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+// import { useState } from 'react';
+import './index.css';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './components/Login/Login';
+import Dashboard from './components/Dashboard/Dashboard';
+
+import Layout from './components/Layout'; // Import the Layout component
+import Limits from './components/Limits/Limits';
+import Settings from './components/Settings/Settings';
+import SignUp from './components/Login/SignUp';
 import './App.css';
+import Restricted from './components/RestrictedList/Restricted';
+import RestrictedList from './components/RestrictedList/RestrictedList'
+import TimelimitExceeds from './components/Limits/TimelimitExceeds';
+
+
+// test that we can get data from the backend
+function RedirectToDashboard() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const loggedIn = localStorage.getItem('loggedIn');
+    if (loggedIn) {
+      navigate('/dashboard');
+    }
+  }, [navigate]);
+
+  return null;
+}
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <RedirectToDashboard />
+      <Routes>
+        <Route path="/" element={<Login/>} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/dashboard" element={<Layout><Dashboard /></Layout>} />
+        <Route path="/restricted-list" element={<Layout><RestrictedList/></Layout>} /> {/* New route for RestrictedList */}
+        <Route path="/limits" element={<Layout><Limits /></Layout>} /> 
+        <Route path="/settings" element={<Layout><Settings /></Layout>}/>
+        <Route path="/restricted" element={<Restricted/>}/>
+        <Route path="/limt_exceeds" element={<TimelimitExceeds />}/>
+        
+        
+
+      </Routes>
+    </Router>
   );
 }
 
