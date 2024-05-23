@@ -61,6 +61,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_19_143328) do
     t.datetime "updated_at", null: false
     t.string "email"
     t.string "password_digest"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   create_table "watch_lists", force: :cascade do |t|
@@ -77,6 +78,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_19_143328) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.index ["url"], name: "index_website_usages_on_url"
+    t.index ["user_id"], name: "index_website_usages_on_user_id"
   end
 
 end
