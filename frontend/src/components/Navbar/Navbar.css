@@ -1,63 +1,123 @@
-/* Navbar.css */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #000428, #004e92); /* Midnight blue to black-blue gradient */
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fix the navbar to the top of the page */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+.navbar-left, .navbar-center, .navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left {
+  flex: 1;
+}
+
+.navbar-center {
+  flex: 5;
+  justify-content: center;
+}
+
+.navbar-right {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
 .logo-container {
   display: flex;
-  align-items: center; /* This will vertically align the logo and the text */
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
 }
 
 .brand-name {
-  display: inline-block;
-  vertical-align: middle; /* This will vertically align the text with the logo */
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.navbar {
-    background-color: #333;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-  }
+.navbar-center a {
+  display: flex;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navbar-center a.active, .navbar-center a:hover {
+  color: #ff66b2; /* Pink color for active and hover states */
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.dropdown-toggle {
+ margin-top: 3px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
   
-  .navbar-left,
-  .navbar-right {
-    display: flex;
-    align-items: center;
-  }
-  
+}
+
+.dropdown-toggle:hover {
+  background-color:#004e92;
+  color: #ff66b2; /* Pink color for hover state */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(to right, #000428, #004e92); /* Matching gradient background */
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+}
+
+.dropdown-item:hover, .dropdown-item.active {
+  background: rgba(255, 255, 255, 0.1); /* Light transparent background on hover */
+  color: #ff66b2; /* Pink color for hover and active states */
+}
+
+.navbar-right .icon {
+  padding-right: 50px;
+  height: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
   .navbar-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
   }
-  
-  .navbar a {
-    text-decoration: none;
-    color: white;
-    margin: 0 10px;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .navbar a:hover {
-    color: #04AA6D;
-  }
-  
-  .logo {
-    
-    height:40px; /* Adjust size as needed */
-    margin-right: 10px;
-  }
-  
-  .icon {
-    height: 20px; /* Adjust size as needed */
-  }
-  
-  @media (max-width: 768px) {
-    .navbar-center,
-    .navbar-right {
-      justify-content: space-around;
-    }
-  
-    .navbar a {
-      margin: 0 5px;
-    }
-  }
-  
+}

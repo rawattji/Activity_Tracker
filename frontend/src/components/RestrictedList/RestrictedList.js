@@ -85,8 +85,6 @@ const RestrictedList = () => {
     setNewSite(e.target.value);
   };
 
- 
-
   return (
     <div className="restrictedList-container">
       <h2 className="restrictedList-title">Restricted Sites</h2>
@@ -109,7 +107,6 @@ const RestrictedList = () => {
           </li>
         ))}
       </ul>
-     
     </div>
   );
 };

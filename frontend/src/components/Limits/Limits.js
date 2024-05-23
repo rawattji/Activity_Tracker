@@ -110,7 +110,7 @@ const Limits = () => {
         </div>
         <div className="right-column">
           <h2>Limited URLs</h2>
-          <ul>
+          <ul className="limits-list">
             {urlList.map((item, index) => (
               <li key={index}>
                 {item.url} - {item.time_limit} minutes

@@ -1,44 +1,46 @@
-/* Settings.css */
-
 .settings-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* This will make the container take up the full height of the viewport */
-    padding: 20px;
-  }
-  
-  .settings-container .settings-option {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .settings-container input[type="checkbox"] {
-    margin-right: 10px;
-  }
-  
-  .settings-container label {
-    margin-right: 10px;
-  }
-  
-  .settings-container input[type="date"] {
-    margin-right: 10px;
-  }
-  
-  .settings-container button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .settings-container button:hover {
-    background-color: #45a049;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 70px; /* Space for the fixed navbar */
+  border-radius: 10px;
+  background: linear-gradient(to right, #000428, #004e92); /* Matching the theme */
+  color: #ddd; /* Text color */
+}
+
+.settings-title {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.settings-reports {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.settings-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.settings-button {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.settings-button:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}

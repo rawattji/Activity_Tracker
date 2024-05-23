@@ -1,74 +1,97 @@
-/* limits.css - Specific to the Limits component */
 .limits-container {
   display: flex;
-  justify-content: space-between;
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
+  margin-top: 70px; /* Space for the fixed navbar */
+  border-radius: 10px;
+  background: linear-gradient(to right, #000428, #004e92); /* Matching the theme */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #ddd; /* Text color */
 }
 
-.left-column {
-  width: 50%; /* 2/4 of the width */
-  padding-right: 12.5%; /* 1/4 of the width as space */
-}
-
-.right-column {
-  width: 25%; /* 1/4 of the width */
-}
-
-.limits-container h2 {
-  color: #333;
-}
-
-.limits-container > div {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+.row {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  margin: 30px auto;
 }
 
-.limits-container label {
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.left-column, .right-column {
+  flex: 1;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+label {
   display: block;
   margin-bottom: 10px;
+  color: #ddd;
 }
 
-.limits-container input[type="text"],
-.limits-container input[type="number"] {
+input {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-}
-
-.limits-container button {
-  background-color: #5cb85c;
-  justify-content: space-between;
-  color: white;
-  padding: 10px 15px;
+  margin-bottom: 20px;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 10px;
-
+  border-radius: 5px;
 }
+
 .button-set-limit {
-  margin-right: 10px; /* Adjust the space as needed */
+  padding: 10px 20px;
+  background-color: #004e92;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.limits-container button:hover {
-  background-color: #449d44;
+.button-set-limit:hover {
+  background-color: #003d73;
 }
 
-.limits-container button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+/* Specific styles for the Limits component */
+.limits-list {
+  list-style: none;
+  padding: 0;
 }
 
-.limits-container p {
-  color: #d9534f;
-  margin-top: 15px;
+.limits-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  color: #fff;
+}
+
+.limits-list li button {
+  background-color: #e57373;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.limits-list li button:hover {
+  background-color: #d32f2f;
 }

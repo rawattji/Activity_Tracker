@@ -63,35 +63,35 @@ function fetchWatchList() {
 }
 
 // Function to fetch time categories from the backend
-function fetchTimeCategories(userId) {
-  return fetch(`http://localhost:3000/users/${userId}/time_categories`)
-    .then(response => response.json())
-    .catch(error => {
-      console.error('Error fetching time categories:', error);
-      return [];
-    });
-}
+// function fetchTimeCategories(userId) {
+//   return fetch(`http://localhost:3000/users/${userId}/time_categories`)
+//     .then(response => response.json())
+//     .catch(error => {
+//       console.error('Error fetching time categories:', error);
+//       return [];
+//     });
+// }
 
 // Function to generate reports
-function generateReport(userId, reportType) {
-  return fetch(`http://localhost:3000/users/${userId}/reports/generate?report_type=${reportType}`)
-    .then(response => response.json())
-    .catch(error => {
-      console.error('Error generating report:', error);
-      return {};
-    });
-}
+// function generateReport(userId, reportType) {
+//   return fetch(`http://localhost:3000/users/${userId}/reports/generate?report_type=${reportType}`)
+//     .then(response => response.json())
+//     .catch(error => {
+//       console.error('Error generating report:', error);
+//       return {};
+//     });
+// }
 
 // Function to delete all user data
-function deleteAllData(userId) {
-  return fetch(`http://localhost:3000/users/${userId}`, {
-    method: 'DELETE',
-  })
-  .then(response => response.json())
-  .catch(error => {
-    console.error('Error deleting user data:', error);
-  });
-}
+// function deleteAllData(userId) {
+//   return fetch(`http://localhost:3000/users/${userId}`, {
+//     method: 'DELETE',
+//   })
+//   .then(response => response.json())
+//   .catch(error => {
+//     console.error('Error deleting user data:', error);
+//   });
+// }
 
 // Function to update tab and send data
 function updateTabAndSendData(tab) {
@@ -148,18 +148,17 @@ chrome.tabs.onRemoved.addListener((tabId, removeInfo) => {
 });
 
 // Example usage of the new functions
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.action === 'fetchFeedback') {
-    fetchFeedback().then(data => sendResponse({ data }));
-  } else if (request.action === 'fetchWatchList') {
-    fetchWatchList().then(data => sendResponse({ data }));
-  } else if (request.action === 'fetchTimeCategories') {
-    fetchTimeCategories(request.userId).then(data => sendResponse({ data }));
-  } else if (request.action === 'generateReport') {
-  generateReport(request.userId, request.reportType).then(data => sendResponse({ data }));
-  } else if (request.action === 'deleteAllData') {
-  deleteAllData(request.userId).then(data => sendResponse({ data }));
-  }
-  return true; // Will respond asynchronously
-  });
-  
+// chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+//   if (request.action === 'fetchFeedback') {
+//     fetchFeedback().then(data => sendResponse({ data }));
+//   } else if (request.action === 'fetchWatchList') {
+//     fetchWatchList().then(data => sendResponse({ data }));
+//   } else if (request.action === 'fetchTimeCategories') {
+//     fetchTimeCategories(request.userId).then(data => sendResponse({ data }));
+//   } else if (request.action === 'generateReport') {
+//   generateReport(request.userId, request.reportType).then(data => sendResponse({ data }));
+//   } else if (request.action === 'deleteAllData') {
+//   deleteAllData(request.userId).then(data => sendResponse({ data }));
+//   }
+//   return true; // Will respond asynchronously
+//   });
